@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<button id="btn">排序</button>
+试着输入一串数字吧~<input type="text" id="xxx">
+</body>
+<script src="quicksort.js"></script>
+<script>
+  var arr = document.getElementById('xxx');
+
+  document.getElementById('btn').onclick = function () {
+    var data = arr.value.split("");
+    quickSort( data, 0, data.length-1 );
+    console.log('快速排序：', data);
+  }
+</script>
+</html>
